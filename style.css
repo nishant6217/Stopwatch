@@ -1,0 +1,97 @@
+
+/*  clearing default margin and padding */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* setting font and babckground colour of body */
+body{
+    font-family: sans-serif;
+    background-color: #f2f4f8;
+}
+
+/* container */
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* stopwatch container */
+.stopwatch{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    height: 50%;
+    border: 2px grey solid;
+    border-radius: 200px;
+    padding: 1rem;
+    box-shadow: 2px -1px 12px 1px rgba(215,185,185,0.56);
+    background-color: white;
+}
+
+/* watch (second , milisecond , minuutes) */
+.watch{
+    padding: 1rem;
+    font-size: 5rem;
+    color: darkslategray;
+}
+
+/* action container  */
+.actions{
+    padding: 1rem;
+}
+
+/*start , stop , reset button */
+.btn{
+    width: 5rem;
+    padding: .5rem;
+    margin-right: 0.5rem;
+    border: 1px solid grey;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+/* hover and focus of buttons */
+.btn:hover,
+.btn:focus{
+    box-shadow: 2px -1px 12px 1px rgba(215,185,185,0.56);
+    color: white;
+}
+#start:hover,
+#start:focus{
+    background-color: dodgerblue;
+}
+#stop:hover,
+#stop:focus{
+    background-color: green;
+}
+#reset:hover,
+#reset:focus{
+    background-color: crimson;
+}
+
+/* used for making responsive */
+@media only screen and (max-width: 576px) {
+  .stopwatch{
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+  }
+  .watch{
+      font-size: 3rem;
+  }
+  .btn{
+      width: 3.5rem;
+      font-size: .8rem;
+  }
+}
